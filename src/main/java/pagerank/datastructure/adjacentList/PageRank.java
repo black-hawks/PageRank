@@ -1,5 +1,7 @@
 package pagerank.datastructure.adjacentList;
 
+import pagerank.datastructure.Graph;
+
 import java.util.*;
 
 public class PageRank {
@@ -9,18 +11,18 @@ public class PageRank {
     //represents the convergence threshold for the PageRank algorithm
     private static final double EPSILON = 0.0001;
 
-    private Map<Node, List<Node>> graph;
+    private Graph<Node> graph;
     private int numNodes;
 
-    public PageRank(Map<Node, List<Node>> graph, int numNodes) {
+    public PageRank(Graph<Node> graph, int numNodes) {
         this.graph = graph;
         this.numNodes = numNodes;
     }
 
-    public Set<Node> calculatePageRank() {
+    public List<Node> calculatePageRank() {
 
         //Initializing the Keyset
-        for(Node key : graph.keySet()){
+        for(Node key : graph.getVertices()){
             key.setCurrentRank(1.0 / numNodes);
             key.setPreviousRank(1.0 / numNodes);
         }
@@ -34,19 +36,19 @@ public class PageRank {
             double danglingRank = 0.0;
 
             // Calculate the PageRank for each node in the graph
-            for(Node node : graph.keySet()) {
+            for(Node node : graph.getVertices()) {
 
-                List<Node> neighbors = graph.get(node);
+                List<Node> neighbors = graph.getEdges(node);
                 if (neighbors == null || neighbors.isEmpty()) {
                     danglingRank += node.getCurrentRank();
                 } else {
                     double neighborRankSum = 0.0;
                     for (Node neighbor : neighbors) {
                         if(neighbor != null){
-                            if( graph.get(neighbor).size() == 0 ) {
+                            if( graph.getEdges(neighbor).size() == 0 ) {
                                 continue;
                             }
-                            neighborRankSum += neighbor.getCurrentRank() / graph.get(neighbor).size();
+                            neighborRankSum += neighbor.getCurrentRank() / graph.getEdges(neighbor).size();
                         }
                     }
                     node.setCurrentRank(((1 - DAMPING_FACTOR) / numNodes) + (DAMPING_FACTOR * neighborRankSum));
@@ -55,15 +57,15 @@ public class PageRank {
 
             // Handle nodes with no outgoing links (dangling nodes)
             danglingRank *= DAMPING_FACTOR / numNodes;
-            for (Node key: graph.keySet()) {
-                if(graph.get(key).size() == 0){
+            for (Node key: graph.getVertices()) {
+                if(graph.getEdges(key).size() == 0){
                     key.setCurrentRank((1 - DAMPING_FACTOR) / numNodes + danglingRank);
                 }
             }
 
             // Check for convergence
             hasConverged = true;
-            for (Node node: graph.keySet()) {
+            for (Node node: graph.getVertices()) {
                 if (Math.abs(node.getCurrentRank() - node.getPreviousRank()) > EPSILON) {
                     hasConverged = false;
                     break;
@@ -71,14 +73,14 @@ public class PageRank {
             }
 
 
-            for (Node node: graph.keySet()) {
+            for (Node node: graph.getVertices()) {
                 node.setPreviousRank(node.getCurrentRank());
             }
 
             i++;
         }
 
-        return graph.keySet();
+        return graph.getVertices();
     }
 
 }

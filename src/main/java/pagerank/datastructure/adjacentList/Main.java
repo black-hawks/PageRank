@@ -38,8 +38,8 @@ public class Main {
         System.out.println(graph.getNumNodes());
 
         // Calculate the PageRank for each node
-        PageRank pageRank = new PageRank(((AdjacencyListGraph<Node>) graph).getAdjacencyList(), graph.getNumNodes());
-        Set<Node> pageRankValues = pageRank.calculatePageRank();
+        PageRank pageRank = new PageRank(graph, graph.getNumNodes());
+        List<Node> pageRankValues = pageRank.calculatePageRank();
 //        Collections.sor
         int i =0;
         // Print the PageRank values for each node

@@ -13,4 +13,8 @@ public interface Graph<T> {
   // Get the neighbors of a node
   List<T> getNeighbors(T node);
 
+  List<T> getVertices();
+
+  List<T> getEdges(T node);
+
 }

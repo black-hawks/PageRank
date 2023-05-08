@@ -10,60 +10,67 @@ import java.util.*;
  * @param <V> the type of vertices in the graph
  */
 public class AdjacencyListGraph<V> implements Graph<V> {
+  /**
+   * The adjacency list of the graph, which stores the edges for each vertex in the form of a list of Node objects.
+   */
+  private final Map<V, List<V>> adjacencyList;
 
 
+  public AdjacencyListGraph() {
+    adjacencyList = new HashMap<>();
+  }
 
-    /**
-     * The adjacency list of the graph, which stores the edges for each vertex in the form of a list of Node objects.
-     */
-    private Map<V, List<V>> adjacencyList ;
+  public void addVertex(V node) {
+    adjacencyList.putIfAbsent(node, new ArrayList<>());
+  }
 
-
-    public AdjacencyListGraph() {
-        adjacencyList = new HashMap<>();
+  @Override
+  public void addEdge(V node1, V node2) {
+    if (!adjacencyList.containsKey(node1)) {
+      addVertex(node1);
     }
-
-    public void addVertex(V node){
-        adjacencyList.putIfAbsent(node, new ArrayList<>());
+    if (!adjacencyList.containsKey(node2)) {
+      addVertex(node2);
     }
+    adjacencyList.get(node1).add(node2);
+  }
 
-    @Override
-    public void addEdge(V node1, V node2) {
-        if(! adjacencyList.containsKey(node1)){
-            addVertex(node1);
-        }
-        if(! adjacencyList.containsKey(node2)){
-            addVertex(node2);
-        }
-        adjacencyList.get(node1).add(node2);
-    }
+  @Override
+  public int getNumNodes() {
+    return adjacencyList.size();
+  }
 
-    @Override
-    public int getNumNodes() {
-        return adjacencyList.size();
-    }
+  @Override
+  public List<V> getNeighbors(V node) {
+    return adjacencyList.get(node);
+  }
 
-    @Override
-    public List<V> getNeighbors(V node) {
-        return adjacencyList.get(node);
-    }
+  @Override
+  public List<V> getVertices() {
+    return adjacencyList.keySet().stream().toList();
+  }
 
-    public Set<V> getAllNodes() {
-        return adjacencyList.keySet();
-    }
+  @Override
+  public List<V> getEdges(V node) {
+    return adjacencyList.get(node);
+  }
 
-    public void removeEdge(int node1, int node2) {
-        adjacencyList.get(node1).remove(Integer.valueOf(node2));
-    }
+  public Set<V> getAllNodes() {
+    return adjacencyList.keySet();
+  }
 
-    public void removeNode(V node) {
-        adjacencyList.remove(node);
-        for (V neighbor : adjacencyList.keySet()) {
-            adjacencyList.get(neighbor).remove(node);
-        }
-    }
+  public void removeEdge(int node1, int node2) {
+    adjacencyList.get(node1).remove(Integer.valueOf(node2));
+  }
 
-    public Map<V, List<V>> getAdjacencyList() {
-        return adjacencyList;
+  public void removeNode(V node) {
+    adjacencyList.remove(node);
+    for (V neighbor : adjacencyList.keySet()) {
+      adjacencyList.get(neighbor).remove(node);
     }
+  }
+
+  public Map<V, List<V>> getAdjacencyList() {
+    return adjacencyList;
+  }
 }

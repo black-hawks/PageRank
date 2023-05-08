@@ -7,10 +7,14 @@ public class Node {
     private double previousRank;
     private int id;
 
-    public Node(double rank, int id) {
+    public Node(int id, double rank) {
         this.currentRank = rank;
         this.previousRank = rank;
         this.id = id;
+    }
+
+    public Node(int id) {
+        this(id, 0);
     }
 
     public int getId() {

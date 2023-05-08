@@ -1,7 +1,8 @@
 package pagerank.util;
 
 import pagerank.datastructure.Graph;
-import pagerank.datastructure.GraphImpl;
+
+import pagerank.datastructure.adjacentList.Node;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,12 +14,14 @@ public class DataGenerator {
     this.fileReader = new FileReader("web-Google.txt", "\t");
   }
 
-  public Graph<Integer> generateGraph() throws IOException {
-    Graph<Integer> graph = new GraphImpl<>();
+  public Graph<Node> generateGraph(Graph<Node> graph) throws IOException {
     String[] line;
     while ((line = this.fileReader.readLine()) != null) {
-      graph.addEdge(Integer.parseInt(line[0]), Integer.parseInt(line[1]));
+      Node node1 = new Node(0, Integer.parseInt(line[0]));
+      Node node2 = new Node(0, Integer.parseInt(line[1]));
+      graph.addEdge(node1, node2);
     }
+
     return graph;
   }
 }

@@ -1,6 +1,7 @@
 package pagerank.datastructure;
 
 import java.util.List;
+import java.util.Map;
 
 public interface Graph<T> {
   // Add an edge between two nodes
@@ -11,4 +12,5 @@ public interface Graph<T> {
 
   // Get the neighbors of a node
   List<T> getNeighbors(T node);
+
 }

@@ -1,12 +1,11 @@
 package pagerank.datastructure.adjacentList;
 
-import pagerank.algorithms.CycleCount;
+import pagerank.algorithms.PageRankResult;
 import pagerank.datastructure.Graph;
 import pagerank.util.CsvFileHandler;
 import pagerank.util.DataGenerator;
 
 import java.util.List;
-
 
 public class Main {
 
@@ -49,17 +48,28 @@ public class Main {
         PageRank pageRank = new PageRank(graph, graph.getNumNodes());
 
         start = System.nanoTime();
-        List<Node> pageRankValues = pageRank.calculatePageRank();
+        PageRankResult pageRankResult = pageRank.calculatePageRank();
+        List<Node> pageRankValues = pageRankResult.getPageRankList();
 
         end = System.nanoTime();
 
-        System.out.println("Time taken to calculate  Page Rank " + (double)(end - start)/ 1_000_000_000.0);
+        System.out.println("Time taken to calculate  Page Rank " + (end - start)/ 1_000_000_000.0);
 
         CsvFileHandler.csvWriter("Output.csv", pageRankValues);
 
         CsvFileHandler.csvReader("Output.csv");
 
 //        CycleCount.isCyclic(graph);
+        int i = 0;
+//         Print the PageRank values for each node
+        for (Node node : pageRankValues) {
+            System.out.println(node.getId() + " : value " + node.getCurrentRank());
+            i++;
+            if (i > 10) {
+                break;
+            }
+        }
+        System.out.println(pageRankResult.getConvergence());
     }
 }
 

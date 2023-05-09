@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="Additional data">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" afterDir="false" />
+    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683653384913</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Java Doc for CycleCount">
+      <created>1683653618021</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653618021</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,7 +262,8 @@
     <MESSAGE value="Add Convergence Experiment" />
     <MESSAGE value="Update README.md" />
     <MESSAGE value="Update .idea files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .idea files" />
+    <MESSAGE value="Java Doc for CycleCount" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for CycleCount" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

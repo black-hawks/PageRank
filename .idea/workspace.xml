@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d37cc6a1-7f8a-4a5e-a7aa-761b1320a126" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pagerank/PageRankTest.java" afterDir="false" />
+    <list default="true" id="d37cc6a1-7f8a-4a5e-a7aa-761b1320a126" name="Changes" comment="Fix graph references">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRankResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PageRank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PageRank.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/GraphImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/GraphImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/AdjacencyListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/AdjacencyListGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/DataGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +53,7 @@
       <recent name="pagerank" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PageRankTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pagerank.datastructure.adjacentList.Main" />
       <module name="PageRank" />
@@ -106,8 +89,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PageRankTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PageRankTest" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +128,26 @@
           <url>file://$PROJECT_DIR$/src/test/java/pagerank/PageRankTest.java</url>
           <line>43</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Main.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,7 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="" />
+    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="Fix Main issues`">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageRank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PageRank.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/AdjacencyListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/AdjacencyListGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/DataGenerator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,13 +79,52 @@
       <recent name="pagerank" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.pagerank.expriments.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pagerank.datastructure.adjacentList.Main" />
+      <option name="MAIN_CLASS_NAME" value="pagerank.datastructure.graph.Main" />
       <module name="PageRank" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pagerank.datastructure.adjacentList.*" />
+          <option name="PATTERN" value="pagerank.algorithms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PageRank" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pagerank.expriments.PageRank" />
+      <module name="PageRank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pagerank.expriments.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pagerank.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pagerank.Main" />
+      <module name="PageRank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pagerank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pagerank.expriments.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pagerank.expriments.Main" />
+      <module name="PageRank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pagerank.expriments.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -79,13 +148,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PageRank [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Application.PageRank" />
+      <item itemvalue="Application.pagerank.expriments.Main" />
+      <item itemvalue="Application.pagerank.Main" />
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.PageRankTest" />
+      <item itemvalue="Maven.PageRank [install]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.pagerank.expriments.Main" />
+        <item itemvalue="Application.PageRank" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.pagerank.Main" />
         <item itemvalue="JUnit.PageRankTest" />
       </list>
     </recent_temporary>
@@ -93,7 +194,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d37cc6a1-7f8a-4a5e-a7aa-761b1320a126" name="Changes" comment="" />
+      <changelist id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="Fix Main issues`" />
       <created>1683550131341</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -106,7 +207,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683624743655</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix Main issues">
+      <created>1683628928790</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683628928790</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fix Graph Vertex issue">
+      <created>1683634827920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683634827920</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,7 +237,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Get Convergence List" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get Convergence List" />
+    <MESSAGE value="Fix Main issues" />
+    <MESSAGE value="Fix Graph Vertex issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Graph Vertex issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -138,19 +255,9 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Main.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/PageRank.java</url>
-          <line>94</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacentList/Main.java</url>
-          <line>50</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

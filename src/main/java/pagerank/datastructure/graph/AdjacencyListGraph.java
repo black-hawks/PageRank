@@ -1,6 +1,4 @@
-package pagerank.datastructure.adjacentList;
-
-import pagerank.datastructure.Graph;
+package pagerank.datastructure.graph;
 
 import java.util.*;
 import java.util.stream.Collectors;

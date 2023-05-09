@@ -1,16 +1,16 @@
 package pagerank.algorithms;
 
-import pagerank.datastructure.Graph;
-import pagerank.datastructure.adjacentList.AdjacencyListGraph;
-import pagerank.datastructure.adjacentList.Node;
 
-import java.util.ArrayList;
+import pagerank.datastructure.graph.AdjacencyListGraph;
+import pagerank.datastructure.graph.Graph;
+import pagerank.datastructure.graph.Node;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
 public class CycleCount {
-    public static int count = 0;
+  public static int count = 0;
 
   public static boolean isCyclicUtil(Graph g, Node u, LinkedList<Node> visited, LinkedList<Node> recursionStack) {
     if (recursionStack.contains(u)) {
@@ -40,25 +40,24 @@ public class CycleCount {
     LinkedList<Node> visited = new LinkedList();
     LinkedList<Node> recursionStack = new LinkedList();
 
-    Set<Node> vertices  = ((AdjacencyListGraph)graph).getAllNodes();
-    for(Node node : vertices){
-      if(graph.getNeighbors(node).size() != 0){
+    Set<Node> vertices = ((AdjacencyListGraph) graph).getAllNodes();
+    for (Node node : vertices) {
+      if (graph.getNeighbors(node).size() != 0) {
         if (!visited.contains(node) && isCyclicUtil(graph, graph.getNeighbors(node).get(0), visited, recursionStack)) {
           count++;
         }
       }
 
     }
-      if (count > 0) {
-        System.out.println("Cycle detected");
-        System.out.println("Graph contains " + count + " cycles");
-      } else {
-        System.out.println("Graph doesn't contain cycle");
-      }
+    if (count > 0) {
+      System.out.println("Cycle detected");
+      System.out.println("Graph contains " + count + " cycles");
+    } else {
+      System.out.println("Graph doesn't contain cycle");
+    }
 
 //  return count;
   }
-
 
 
 //    public static void main(String args[]) {

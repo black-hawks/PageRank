@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="Additional data">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Mains.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/web-Google-0.1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +51,7 @@
       <recent name="pagerank" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PageRank">
+  <component name="RunManager" selected="Application.pagerank.expriments.Main">
     <configuration name="Convergence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pagerank.expriments.Convergence" />
       <module name="PageRank" />
@@ -156,9 +152,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.pagerank.expriments.Main" />
         <item itemvalue="Application.PageRank" />
         <item itemvalue="Application.Convergence" />
-        <item itemvalue="Application.pagerank.expriments.Main" />
         <item itemvalue="Application.Mains" />
         <item itemvalue="Application.Main" />
       </list>
@@ -222,7 +218,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683649654913</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update README.md">
+      <created>1683653258353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653258353</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update .idea files">
+      <created>1683653384913</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653384913</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,7 +253,9 @@
     <MESSAGE value="Add Experiments" />
     <MESSAGE value="Additional data" />
     <MESSAGE value="Add Convergence Experiment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Convergence Experiment" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Update .idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update .idea files" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -69,8 +69,8 @@ public class PageRank<T> {
         double rank = (1 - DAMPING_FACTOR) / numNodes;
 
         // calculate contribution of neighbors to node's rank
-        for (T neighbor : graph.getNeighbors(node)) {
-          int numLinks = graph.getNeighbors(neighbor).size();
+        for (T neighbor : graph.getEdges(node)) {
+          int numLinks = graph.getEdges(neighbor).size();
           if (numLinks > 0) {
             rank += DAMPING_FACTOR * pageRank.get(neighbor) / numLinks;
           }

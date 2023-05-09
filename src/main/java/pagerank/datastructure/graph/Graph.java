@@ -9,9 +9,6 @@ public interface Graph<T> {
   // Get the number of nodes in the graph
   int getNumNodes();
 
-  // Get the neighbors of a node
-  List<T> getNeighbors(T node);
-
   List<T> getVertices();
 
   List<T> getEdges(T node);

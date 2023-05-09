@@ -41,7 +41,7 @@ public final class CycleCount {
     recursionStack.add(u);
 
     // Recur for all the vertices adjacent to this vertex
-    List<Integer> neighbours = g.getNeighbors(u);
+    List<Integer> neighbours = g.getEdges(u);
 
     for (Integer v : neighbours) {
       if (isCyclicUtil(g, v, visited, recursionStack)) {
@@ -67,7 +67,7 @@ public final class CycleCount {
     List<Integer> vertices = graph.getVertices();
     for (Integer node : vertices) {
       // Check only non-isolated vertices
-      if (!graph.getNeighbors(node).isEmpty() && (!visited.contains(node) && isCyclicUtil(graph, graph.getNeighbors(node).get(0), visited, recursionStack))) {
+      if (!graph.getEdges(node).isEmpty() && (!visited.contains(node) && isCyclicUtil(graph, graph.getEdges(node).get(0), visited, recursionStack))) {
         count++;
       }
     }

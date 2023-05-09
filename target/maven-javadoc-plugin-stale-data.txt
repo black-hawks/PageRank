@@ -1,0 +1,57 @@
+@options
+@packages
+-classpath
+'C:/Users/purvi/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar;C:/Users/purvi/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar;C:/Users/purvi/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar;C:/Users/purvi/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar;C:/Users/purvi/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar;C:/Users/purvi/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'19'
+-sourcepath
+'D:/UCD/ADS/a5/PageRank/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/UCD/ADS/a5/PageRank/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'PageRank 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'PageRank 1.0-SNAPSHOT API'
+pagerank.algorithms
+pagerank.datastructure.graph
+pagerank.expriments
+pagerank.util
+C:\Users\purvi\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar = 1683577177817
+C:\Users\purvi\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar = 1683577178221
+C:\Users\purvi\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar = 1669047101794
+C:\Users\purvi\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar = 1683577178146
+C:\Users\purvi\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar = 1677838861452
+C:\Users\purvi\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar = 1683577178110
+D:\UCD\ADS\a5\PageRank\src\main\java = 1683547397470
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\allclasses-index.html = 1683664176473
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\allpackages-index.html = 1683664176476
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\copy.svg = 1683664176531
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\element-list = 1683664176271
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\help-doc.html = 1683664176521
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\index-all.html = 1683664176508
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\index.html = 1683664176445
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\jquery-ui.overrides.css = 1683664176553
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\member-search-index.js = 1683664176484
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\module-search-index.js = 1683664176479
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\overview-summary.html = 1683664176515
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\overview-tree.html = 1683664176440
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\package-search-index.js = 1683664176481
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\script.js = 1683664176528
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\search-page.js = 1683664176538
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\search.html = 1683664176512
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\search.js = 1683664176535
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\stylesheet.css = 1683664176525
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\tag-search-index.js = 1683664176486
+D:\UCD\ADS\a5\PageRank\target\site\apidocs\type-search-index.js = 1683664176483

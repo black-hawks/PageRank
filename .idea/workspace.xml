@@ -4,44 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="Java Doc for FileReader">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/AdjacencyMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_10.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_3.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_4.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_5.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_6.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_7.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_8.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graph_data_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/graph_data_9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/adjacencyMatrix/AdjacencyMatrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Convergence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Convergence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/ExperimentWithMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/ExperimentWithMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/ExperimentWithList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/MatrixComparission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/MatrixComparission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/PageRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/PageRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.001.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.001.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.005.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.005.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.25.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.25.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google-0.5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/web-Google.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +57,7 @@
       <recent name="pagerank" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PageRank">
+  <component name="RunManager" selected="Maven.PageRank [javadoc:javadoc]">
     <configuration name="Convergence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pagerank.expriments.Convergence" />
       <module name="PageRank" />
@@ -184,12 +148,38 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="PageRank [javadoc:javadoc]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javadoc:javadoc" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.ExperimentWithList" />
       <item itemvalue="Application.ExperimentWithMatrix" />
       <item itemvalue="Application.MatrixComparission" />
       <item itemvalue="Application.PageRank" />
       <item itemvalue="Application.Convergence" />
+      <item itemvalue="Maven.PageRank [javadoc:javadoc]" />
       <item itemvalue="Maven.PageRank [install]" />
     </list>
     <recent_temporary>
@@ -358,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683658100896</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add Java Docs">
+      <created>1683664020099</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1683664020099</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -391,7 +388,8 @@
     <MESSAGE value="Java Doc for DataGenerator" />
     <MESSAGE value="Java Doc for FileReader" />
     <MESSAGE value="Java Doc for PageRank" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for PageRank" />
+    <MESSAGE value="Add Java Docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Java Docs" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

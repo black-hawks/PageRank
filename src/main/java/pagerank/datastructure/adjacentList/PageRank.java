@@ -3,33 +3,38 @@ package pagerank.datastructure.adjacentList;
 import pagerank.algorithms.PageRankResult;
 import pagerank.datastructure.Graph;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class PageRank {
+public class PageRank<T> {
   //damping Factor of PageRank Algorithm
   private static final double DAMPING_FACTOR = 0.85;
 
   //represents the convergence threshold for the PageRank algorithm
   private static final double EPSILON = 0.0001;
 
-  private Graph<Node> graph;
-  private int numNodes;
+  private final Graph<T> graph;
+  private final int numNodes;
 
-  public PageRank(Graph<Node> graph, int numNodes) {
+  public PageRank(Graph<T> graph, int numNodes) {
     this.graph = graph;
     this.numNodes = numNodes;
   }
 
-  public PageRankResult calculatePageRank() {
+  public PageRankResult<T> calculatePageRank() {
     List<Double> convergenceList = new ArrayList<>();
     double epsilonThreshold = EPSILON / graph.getVertices().size();
-    System.out.println(epsilonThreshold);
-    System.out.println(graph.getVertices().size());
-    //Initializing the Keyset
-    for (Node key : graph.getVertices()) {
-      key.setCurrentRank(1.0 / numNodes);
-//      key.setPreviousRank(1.0 / numNodes);
+
+    System.out.println("Epsilon Threshold: " + epsilonThreshold);
+
+    Map<T, Double> pageRank = new HashMap<>();
+    Set<T> danglingNodes = new HashSet<>();
+
+    for (T node : graph.getVertices()) {
+      double initialRank = 1.0 / numNodes;
+      pageRank.put(node, initialRank);
+      if (graph.getEdges(node).isEmpty()) {
+        danglingNodes.add(node);
+      }
     }
 
     boolean hasConverged = false;
@@ -39,111 +44,51 @@ public class PageRank {
     while (i < 100 && !hasConverged) {
 
       System.out.println("Iteration " + i);
-      double danglingRank = 0.0;
+      double sum = 0.0;
+      Map<T, Double> newPageRank = new HashMap<>();
 
-      // Calculate the PageRank for each node in the graph
-      for (Node node : graph.getVertices()) {
+      for (T node : graph.getVertices()) {
+        double rank = (1 - DAMPING_FACTOR) / numNodes;
 
-        List<Node> neighbors = graph.getEdges(node);
-        if (neighbors == null || neighbors.isEmpty()) {
-          danglingRank += node.getCurrentRank();
-        } else {
-          double neighborRankSum = 0.0;
-          for (Node neighbor : neighbors) {
-            if (neighbor != null) {
-              if (graph.getEdges(neighbor).size() == 0) {
-                continue;
-              }
-              neighborRankSum += neighbor.getCurrentRank() / graph.getEdges(neighbor).size();
-            }
+        for (T neighbor : graph.getNeighbors(node)) {
+          int numLinks = graph.getNeighbors(neighbor).size();
+          if (numLinks > 0) {
+            rank += DAMPING_FACTOR * pageRank.get(neighbor) / numLinks;
           }
-          node.setCurrentRank(((1 - DAMPING_FACTOR) / numNodes) + (DAMPING_FACTOR * neighborRankSum));
         }
+
+        newPageRank.put(node, rank);
+        sum += rank;
       }
 
-      // Handle nodes with no outgoing links (dangling nodes)
+      double danglingRank = 0.0;
+      for (T node : danglingNodes) {
+        danglingRank += pageRank.get(node);
+      }
       danglingRank *= DAMPING_FACTOR / numNodes;
-      for (Node key : graph.getVertices()) {
-        if (graph.getEdges(key).size() == 0) {
-          key.setCurrentRank((1 - DAMPING_FACTOR) / numNodes + danglingRank);
-        }
+      sum += danglingRank;
+
+
+      // Normalize PageRank values
+      double difference = 0.0;
+      for (T node : graph.getVertices()) {
+        double rank = newPageRank.get(node) + danglingRank;
+        rank /= sum;
+        difference += Math.abs(rank - pageRank.get(node));
+        pageRank.put(node, rank);
       }
 
-      // Check for convergence
-//      hasConverged = true;
-      double totalDifference = 0.0;
-      List<Node> vertices = graph.getVertices();
-      for (Node node : vertices) {
-        double difference = Math.abs(node.getCurrentRank() - node.getPreviousRank());
-        totalDifference += difference;
-      }
-
-      double averageDifference = totalDifference / vertices.size();
+      double averageDifference = difference / graph.getVertices().size();
       convergenceList.add(averageDifference);
       System.out.println(averageDifference);
       if (averageDifference < epsilonThreshold) {
         hasConverged = true;
       }
-      for (Node node : graph.getVertices()) {
-        node.setPreviousRank(node.getCurrentRank());
-      }
 
       i++;
     }
 
-    return new PageRankResult(graph.getVertices(), convergenceList);
+    return new PageRankResult<>(pageRank, convergenceList);
   }
 
 }
-
-
-// Perform iterative PageRank calculations until convergence
-//        boolean hasConverged = false;
-//        int i = 0;
-//        while (i < 5) {
-//            Set<Node> oldPageRank = graph.keySet();
-//            double danglingRank = 0.0;
-//
-//            // Calculate the PageRank for each node in the graph
-//            for(Node node : graph.keySet()) {
-//
-//                List<Node> neighbors = graph.get(node);
-//                if (neighbors == null || neighbors.isEmpty()) {
-//                        danglingRank += node.getRank();
-//                } else {
-//                    double neighborRankSum = 0.0;
-//                    for (Node neighbor : neighbors) {
-//                            neighborRankSum += neighbor.getRank() / graph.get(neighbor).size();
-//                    }
-//                    node.setRank((1 - DAMPING_FACTOR) / numNodes + DAMPING_FACTOR * neighborRankSum);
-//                }
-//            }
-//
-//            // Handle nodes with no outgoing links (dangling nodes)
-//            danglingRank *= DAMPING_FACTOR / numNodes;
-////            for (int i = 1; i <= numNodes; i++) {
-////                if (!newPageRank.containsKey(i)) {
-////                    newPageRank.put(i, (1 - DAMPING_FACTOR) / numNodes + danglingRank);
-////                }
-////            }
-//
-//            for (Node key: graph.keySet()) {
-//                if(graph.get(key).size() == 0){
-//                    key.setRank((1 - DAMPING_FACTOR) / numNodes + danglingRank);
-//                }
-//            }
-//
-//            // Check for convergence
-////            hasConverged = true;
-////            for (Node node: oldPageRank) {
-////                if (Math.abs(graph.get( - node.getRank() > EPSILON) {
-////                    hasConverged = false;
-////                    break;
-////                }
-////            }
-////
-////            pageRank = newPageRank;
-//
-//            i++;
-//        }
-

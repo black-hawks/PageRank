@@ -39,9 +39,7 @@ public class Main {
     PageRank pageRank = new PageRank(graph, graph.getNumNodes());
     PageRankResult pageRankResult = pageRank.calculatePageRank();
     List<Node> pageRankValues = pageRankResult.getPageRankList();
-    pageRankValues.sort((a, b) -> {
-      return (int) (a.getCurrentRank() - b.getCurrentRank());
-    });
+
     int i = 0;
 //         Print the PageRank values for each node
     for (Node node : pageRankValues) {

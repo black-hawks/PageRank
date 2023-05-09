@@ -6,6 +6,7 @@ import pagerank.datastructure.adjacentList.Node;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.Set;
 
 public class DataGenerator {
@@ -17,8 +18,10 @@ public class DataGenerator {
 
   public int numOfVertices() throws IOException {
     String[] line;
+    vertices= new HashSet<>();
     while ((line = this.fileReader.readLine()) != null) {
       vertices.add(Integer.parseInt(line[0]));
+      vertices.add(Integer.parseInt(line[1]));
     }
     return vertices.size();
   }

@@ -3,6 +3,7 @@ package pagerank.datastructure.adjacentList;
 import pagerank.datastructure.Graph;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * A class that implements the Graph interface using an adjacency list to represent the graph.
@@ -47,7 +48,7 @@ public class AdjacencyListGraph<V> implements Graph<V> {
 
   @Override
   public List<V> getVertices() {
-    return adjacencyList.keySet().stream().toList();
+    return adjacencyList.keySet().stream().collect(Collectors.toList());
   }
 
   @Override

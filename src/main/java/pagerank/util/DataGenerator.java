@@ -1,6 +1,6 @@
 package pagerank.util;
 
-import pagerank.datastructure.Graph;
+import pagerank.datastructure.graph.Graph;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

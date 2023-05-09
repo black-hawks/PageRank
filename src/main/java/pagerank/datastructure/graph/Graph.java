@@ -1,7 +1,6 @@
-package pagerank.datastructure;
+package pagerank.datastructure.graph;
 
 import java.util.List;
-import java.util.Map;
 
 public interface Graph<T> {
   // Add an edge between two nodes

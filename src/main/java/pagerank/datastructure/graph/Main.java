@@ -1,7 +1,7 @@
-package pagerank.datastructure.adjacentList;
+package pagerank.datastructure.graph;
 
+import pagerank.algorithms.PageRank;
 import pagerank.algorithms.PageRankResult;
-import pagerank.datastructure.Graph;
 import pagerank.util.DataGenerator;
 
 import java.util.Map;

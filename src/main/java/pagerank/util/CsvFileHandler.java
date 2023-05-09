@@ -1,10 +1,10 @@
 package pagerank.util;
 
-import pagerank.datastructure.adjacentList.Node;
+import pagerank.datastructure.graph.Node;
 
 import java.io.BufferedReader;
-import java.io.FileWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
@@ -15,7 +15,7 @@ public class CsvFileHandler {
         try {
             FileWriter writer = new FileWriter(filename);
             for(Node node : pageRankValues){
-                String data = node.getId() + ","+ node.getCurrentRank();
+                String data = node.getId() + "," + node.getRank();
                 writer.write(String.join(",", data));
                 writer.write("\n");
             }

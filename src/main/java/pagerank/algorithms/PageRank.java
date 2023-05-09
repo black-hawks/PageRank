@@ -1,7 +1,6 @@
-package pagerank.datastructure.adjacentList;
+package pagerank.algorithms;
 
-import pagerank.algorithms.PageRankResult;
-import pagerank.datastructure.Graph;
+import pagerank.datastructure.graph.Graph;
 
 import java.util.*;
 
@@ -80,7 +79,7 @@ public class PageRank<T> {
 
       double averageDifference = difference / graph.getVertices().size();
       convergenceList.add(averageDifference);
-      System.out.println(averageDifference);
+      System.out.println("Average Page Rank difference: " + averageDifference);
       if (averageDifference < epsilonThreshold) {
         hasConverged = true;
       }

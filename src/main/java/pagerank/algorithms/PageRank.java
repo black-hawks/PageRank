@@ -9,7 +9,7 @@ public class PageRank<T> {
   private static final double DAMPING_FACTOR = 0.85;
 
   //represents the convergence threshold for the PageRank algorithm
-  private static final double EPSILON = 0.0001;
+  private static final double EPSILON = 0.001;
 
   private final Graph<T> graph;
   private final int numNodes;
@@ -22,8 +22,6 @@ public class PageRank<T> {
   public PageRankResult<T> calculatePageRank() {
     List<Double> convergenceList = new ArrayList<>();
     double epsilonThreshold = EPSILON / graph.getVertices().size();
-
-    System.out.println("Epsilon Threshold: " + epsilonThreshold);
 
     Map<T, Double> pageRank = new HashMap<>();
     Set<T> danglingNodes = new HashSet<>();
@@ -42,7 +40,6 @@ public class PageRank<T> {
 
     while (i < 100 && !hasConverged) {
 
-      System.out.println("Iteration " + i);
       double sum = 0.0;
       Map<T, Double> newPageRank = new HashMap<>();
 
@@ -79,7 +76,6 @@ public class PageRank<T> {
 
       double averageDifference = difference / graph.getVertices().size();
       convergenceList.add(averageDifference);
-      System.out.println("Average Page Rank difference: " + averageDifference);
       if (averageDifference < epsilonThreshold) {
         hasConverged = true;
       }
@@ -87,7 +83,7 @@ public class PageRank<T> {
       i++;
     }
 
-    return new PageRankResult<>(pageRank, convergenceList);
+    return new PageRankResult<>(pageRank, convergenceList, epsilonThreshold);
   }
 
 }

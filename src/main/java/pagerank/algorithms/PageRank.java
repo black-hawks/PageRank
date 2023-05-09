@@ -10,13 +10,22 @@ import java.util.*;
  * @param <T> the type of the nodes in the graph
  */
 public class PageRank<T> {
-  // damping Factor of PageRank Algorithm
+  /**
+   * The damping factor used in the PageRank algorithm.
+   */
   private static final double DAMPING_FACTOR = 0.85;
 
-  // represents the convergence threshold for the PageRank algorithm
+  /**
+   * The tolerance value used to stop the iterations of the PageRank algorithm.
+   */
   private static final double EPSILON = 0.001;
-
+  /**
+   * The graph on which the PageRank algorithm is applied.
+   */
   private final Graph<T> graph;
+  /**
+   * The number of nodes in the graph.
+   */
   private final int numNodes;
 
   /**

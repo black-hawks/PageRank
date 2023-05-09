@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/AdjacencyListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/AdjacencyListGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -257,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683654103886</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Java Doc for AdjancencyListGraph">
+      <created>1683654563740</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1683654563740</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,7 +286,8 @@
     <MESSAGE value="Java Doc for CycleCount" />
     <MESSAGE value="Java Doc for PageRank" />
     <MESSAGE value="Java Doc for PageRankResult" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for PageRankResult" />
+    <MESSAGE value="Java Doc for AdjancencyListGraph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for AdjancencyListGraph" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -1,15 +1,11 @@
 package pagerank.datastructure.adjacentList;
 
 import pagerank.algorithms.PageRankResult;
-import pagerank.algorithms.CycleCount;
 import pagerank.datastructure.Graph;
 import pagerank.util.CsvFileHandler;
 import pagerank.util.DataGenerator;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 public class Main {
 
@@ -57,7 +53,7 @@ public class Main {
 
         end = System.nanoTime();
 
-        System.out.println("Time taken to calculate  Page Rank " + (double)(end - start)/ 1_000_000_000.0);
+        System.out.println("Time taken to calculate  Page Rank " + (end - start)/ 1_000_000_000.0);
 
         CsvFileHandler.csvWriter("Output.csv", pageRankValues);
 

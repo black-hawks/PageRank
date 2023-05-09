@@ -1,8 +1,8 @@
 package pagerank.util;
 
-import pagerank.datastructure.Graph;
+
 import pagerank.datastructure.adjacencyMatrix.AdjacencyMatrix;
-import pagerank.datastructure.adjacentList.Node;
+import pagerank.datastructure.graph.Graph;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class DataGenerator {
     return vertices.size();
   }
 
-  public Graph<Node> generateGraph(Graph<Node> graph) throws IOException {
+  public Graph<Integer> generateGraph(Graph<Integer> graph) throws IOException {
     String[] line;
     while ((line = this.fileReader.readLine()) != null) {
       graph.addEdge(Integer.parseInt(line[0]), Integer.parseInt(line[1]));

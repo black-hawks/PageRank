@@ -2,7 +2,10 @@ package pagerank.datastructure.adjacencyMatrix;
 
 import pagerank.datastructure.graph.Graph;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
 
 public class AdjacencyMatrix<T> implements Graph<T> {
 //    Node[][] matrix;
@@ -44,13 +47,6 @@ public class AdjacencyMatrix<T> implements Graph<T> {
         return numOfVertices;
     }
 
-    @Override
-    public List<T> getNeighbors(T node) {
-        if(node instanceof Integer) {
-          return  getOutDegree((int) node);
-        }
-        return null;
-    }
 
     @Override
     public List<T> getVertices() {

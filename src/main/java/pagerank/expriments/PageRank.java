@@ -19,8 +19,8 @@ public class PageRank {
 
   private static void calcPageRank(String filename) throws IOException {
     long start = System.currentTimeMillis();
-    DataGenerator dataGenerator = new DataGenerator(filename);
-    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
+    DataGenerator dataGenerator = new DataGenerator();
+    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), filename);
     pagerank.algorithms.PageRank<Integer> pageRank = new pagerank.algorithms.PageRank<>(graph, graph.getNumNodes());
     pageRank.calculatePageRank();
     System.out.println("Calculation of Page Rank for " + graph.getVertices().size() + " vertices took: " + (System.currentTimeMillis() - start) + "ms");

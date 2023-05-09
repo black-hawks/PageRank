@@ -3,7 +3,6 @@ package pagerank.expriments;
 import pagerank.algorithms.PageRank;
 import pagerank.algorithms.PageRankResult;
 import pagerank.datastructure.adjacencyMatrix.AdjacencyMatrix;
-import pagerank.datastructure.graph.AdjacencyListGraph;
 import pagerank.datastructure.graph.Graph;
 import pagerank.util.DataGenerator;
 
@@ -17,9 +16,9 @@ public class ExperimentWithMatrix {
 
     public static void main(String[] args) throws IOException {
         DataGenerator dataGenerator = new DataGenerator();
-        int numOfVertices = dataGenerator.numOfVertices();
+        int numOfVertices = dataGenerator.numOfVertices("graph_data.csv");
         AdjacencyMatrix matrix = new AdjacencyMatrix(numOfVertices);
-        Graph<Integer> graph = dataGenerator.generateGraph(matrix);
+        Graph<Integer> graph = dataGenerator.generateGraph(matrix, "graph_data.csv");
         Set<Integer> vertices = dataGenerator.getVertices();
         matrix.setVertices(vertices);
         PageRank<Integer> pageRank = new PageRank<>(graph, graph.getNumNodes());

@@ -13,8 +13,8 @@ public class Convergence {
   }
 
   private static void printConvergenceTimeline(String filename) throws IOException {
-    DataGenerator dataGenerator = new DataGenerator(filename);
-    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
+    DataGenerator dataGenerator = new DataGenerator();
+    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), filename);
     pagerank.algorithms.PageRank<Integer> pageRank = new pagerank.algorithms.PageRank<>(graph, graph.getNumNodes());
     PageRankResult<Integer> pageRankResult = pageRank.calculatePageRank();
     System.out.println("Total iterations: " + pageRankResult.getConvergence().size());

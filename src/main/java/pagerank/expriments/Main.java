@@ -14,8 +14,8 @@ import java.util.Map;
 
 public class Main {
   public static void main(String[] args) throws IOException {
-    DataGenerator dataGenerator = new DataGenerator("web-Google-0.001.txt");
-    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
+    DataGenerator dataGenerator = new DataGenerator();
+    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), "graph_data.csv");
     System.out.println("Number of Vertices: " + graph.getVertices().size());
     PageRank<Integer> pageRank = new PageRank<>(graph, graph.getNumNodes());
     PageRankResult<Integer> pageRankResult = pageRank.calculatePageRank();

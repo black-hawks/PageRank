@@ -21,13 +21,13 @@ public class PageRank {
    * @throws IOException if there is an I/O error.
    */
   public static void main(String[] args) throws IOException {
-    calcPageRank("web-Google-0.001.txt");
-    calcPageRank("web-Google-0.005.txt");
-    calcPageRank("web-Google-0.01.txt");
-    calcPageRank("web-Google-0.05.txt");
-    calcPageRank("web-Google-0.1.txt");
-    calcPageRank("web-Google-0.5.txt");
-    calcPageRank("web-Google.txt");
+    calcPageRank("data/web-Google-0.001.txt");
+    calcPageRank("data/web-Google-0.005.txt");
+    calcPageRank("data/web-Google-0.01.txt");
+    calcPageRank("data/web-Google-0.05.txt");
+    calcPageRank("data/web-Google-0.1.txt");
+    calcPageRank("data/web-Google-0.5.txt");
+    calcPageRank("data/web-Google.txt");
   }
 
   /**

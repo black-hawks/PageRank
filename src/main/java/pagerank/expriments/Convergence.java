@@ -20,7 +20,7 @@ public class Convergence {
    * @throws IOException if there is an error reading the input file
    */
   public static void main(String[] args) throws IOException {
-    printConvergenceTimeline("web-Google-0.001.txt");
+    printConvergenceTimeline("data/web-Google-0.001.txt");
   }
 
   /**

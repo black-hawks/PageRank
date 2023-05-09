@@ -17,7 +17,7 @@ import java.util.Map;
  * calculates the PageRank scores for each page, checks for cycles in the graph, and prints the top ten pages
  * with the highest PageRank scores.
  */
-public class Main {
+public class ExperimentWithList {
   /**
    * The main method of the program. It reads the data file to generate a graph, runs the PageRank algorithm on the graph,
    * checks for cycles in the graph, and prints the top ten pages with the highest PageRank scores.
@@ -27,7 +27,7 @@ public class Main {
    */
   public static void main(String[] args) throws IOException {
     DataGenerator dataGenerator = new DataGenerator();
-    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), "web-Google-0.01.txt");
+    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), "data/web-Google-0.01.txt");
     System.out.println("Number of Vertices: " + graph.getVertices().size());
     PageRank<Integer> pageRank = new PageRank<>(graph, graph.getNumNodes());
     PageRankResult<Integer> pageRankResult = pageRank.calculatePageRank();

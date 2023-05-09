@@ -2,74 +2,63 @@ package pagerank.datastructure.adjacentList;
 
 import pagerank.algorithms.PageRankResult;
 import pagerank.datastructure.Graph;
-import pagerank.util.CsvFileHandler;
 import pagerank.util.DataGenerator;
 
-import java.util.List;
+import java.util.Map;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception {
 
-        DataGenerator dataGenerator = new DataGenerator();
+    DataGenerator dataGenerator = new DataGenerator();
+    long start = System.nanoTime();
+    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
 
-        long start = System.nanoTime();
-        Graph<Node> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
+    long end = System.nanoTime();
 
-        long end = System.nanoTime();
+//    Graph<Integer> graph = new AdjacencyListGraph<>();
 
-//        for(Map.Entry<Node, List<Node>> list : ((AdjacencyListGraph<Node>) graph).getAdjacencyList().entrySet()){
-//            System.out.println("Vertex : " + list.getKey());
-//        }
-//        Graph<Node> graph = new AdjacencyListGraph<>();
-//
-//        Node node1 = new Node(0.0,1);
-//        Node node2 = new Node(0.0,3);
-//        Node node3 = new Node(0.0,4);
-//        Node node4 = new Node(0.0,5);
-//        Node node5 = new Node(0.0,6);
-//
-//        graph.addEdge(node1, node2);
-//        graph.addEdge(node1, node3);
-//        graph.addEdge(node2, node1);
-//        graph.addEdge(node2, node3);
-//        graph.addEdge(node3, node1);
-//        graph.addEdge(node3, node2);
-//        graph.addEdge(node3, node4);
-//        graph.addEdge(node4, node3);
-//        graph.addEdge(node4, node3);
+//    graph.addEdge(1, 2);
+//    graph.addEdge(1, 3);
+//    graph.addEdge(2, 1);
+//    graph.addEdge(2, 3);
+//    graph.addEdge(3, 1);
+//    graph.addEdge(3, 2);
+//    graph.addEdge(3, 4);
+//    graph.addEdge(4, 3);
+//    graph.addEdge(4, 3);
 
-        System.out.println("Number of Nodes present in the Graph : " + graph.getNumNodes());
+    System.out.println("Number of Nodes present in the Graph : " + graph.getNumNodes());
 
-        System.out.println("Time taken to generate the Graph " + (double)(end - start)/ 1_000_000_000.0);
+    System.out.println("Time taken to generate the Graph " + (end - start) / 1_000_000_000.0);
 
 
-        // Calculate the PageRank for each node
-        PageRank pageRank = new PageRank(graph, graph.getNumNodes());
+    // Calculate the PageRank for each node
+    PageRank<Integer> pageRank = new PageRank<>(graph, graph.getNumNodes());
 
-        start = System.nanoTime();
-        PageRankResult pageRankResult = pageRank.calculatePageRank();
-        List<Node> pageRankValues = pageRankResult.getPageRankList();
+    start = System.nanoTime();
+    PageRankResult<Integer> pageRankResult = pageRank.calculatePageRank();
+    Map<Integer, Double> pageRankValues = pageRankResult.getPageRankList();
 
-        end = System.nanoTime();
+    end = System.nanoTime();
 
-        System.out.println("Time taken to calculate  Page Rank " + (end - start)/ 1_000_000_000.0);
+    System.out.println("Time taken to calculate  Page Rank " + (end - start) / 1_000_000_000.0);
 
-        CsvFileHandler.csvWriter("Output.csv", pageRankValues);
+//    CsvFileHandler.csvWriter("Output.csv", pageRankValues);
 
-        CsvFileHandler.csvReader("Output.csv");
+//    CsvFileHandler.csvReader("Output.csv");
 
 //        CycleCount.isCyclic(graph);
-        int i = 0;
+    int i = 0;
 //         Print the PageRank values for each node
-        for (Node node : pageRankValues) {
-            System.out.println(node.getId() + " : value " + node.getCurrentRank());
-            i++;
-            if (i > 10) {
-                break;
-            }
-        }
-        System.out.println(pageRankResult.getConvergence());
+    for (Map.Entry<Integer, Double> entry : pageRankValues.entrySet()) {
+      System.out.println(entry.getKey() + " : value " + entry.getValue());
+      i++;
+      if (i > 10) {
+        break;
+      }
     }
+    System.out.println(pageRankResult.getConvergence());
+  }
 }
 

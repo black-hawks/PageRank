@@ -6,11 +6,11 @@ import java.util.Random;
 
 public class GraphTestDataGenerator {
 
-    private static final int NUM_ROWS = 3000;
-    private static final int MAX_VALUE = 500;
+    private static final int NUM_ROWS = 50000;
+    private static final int MAX_VALUE = 1800;
 
     public static void main(String[] args) {
-        String fileName = "graph_data.csv";
+        String fileName = "graph_data_10.csv";
         try {
             FileWriter writer = new FileWriter(fileName);
 

@@ -1,7 +1,5 @@
 package pagerank.util;
 
-
-import pagerank.datastructure.adjacencyMatrix.AdjacencyMatrix;
 import pagerank.datastructure.graph.Graph;
 
 import java.io.FileNotFoundException;
@@ -10,6 +8,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class DataGenerator {
+  private final FileReader fileReader;
+
+  public DataGenerator(String filepath) throws FileNotFoundException {
+    this.fileReader = new FileReader(filepath, "\t");
   private FileReader fileReader;
   private Set<Integer> vertices;
   public DataGenerator() throws FileNotFoundException {

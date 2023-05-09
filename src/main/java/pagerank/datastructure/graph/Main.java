@@ -1,8 +1,8 @@
 package pagerank.datastructure.graph;
 
+import pagerank.algorithms.CycleCount;
 import pagerank.algorithms.PageRank;
 import pagerank.algorithms.PageRankResult;
-import pagerank.util.DataGenerator;
 
 import java.util.Map;
 
@@ -10,23 +10,22 @@ public class Main {
 
   public static void main(String[] args) throws Exception {
 
-    DataGenerator dataGenerator = new DataGenerator();
+//    DataGenerator dataGenerator = new DataGenerator();
     long start = System.nanoTime();
-    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
+//    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
 
     long end = System.nanoTime();
 
-//    Graph<Integer> graph = new AdjacencyListGraph<>();
+    Graph<Integer> graph = new AdjacencyListGraph<>();
 
-//    graph.addEdge(1, 2);
-//    graph.addEdge(1, 3);
-//    graph.addEdge(2, 1);
-//    graph.addEdge(2, 3);
-//    graph.addEdge(3, 1);
-//    graph.addEdge(3, 2);
-//    graph.addEdge(3, 4);
-//    graph.addEdge(4, 3);
-//    graph.addEdge(4, 3);
+    graph.addEdge(1, 2);
+    graph.addEdge(1, 3);
+    graph.addEdge(2, 1);
+    graph.addEdge(2, 3);
+    graph.addEdge(3, 1);
+    graph.addEdge(3, 2);
+    graph.addEdge(3, 4);
+    graph.addEdge(4, 3);
 
     System.out.println("Number of Nodes present in the Graph : " + graph.getNumNodes());
 
@@ -48,7 +47,7 @@ public class Main {
 
 //    CsvFileHandler.csvReader("Output.csv");
 
-//        CycleCount.isCyclic(graph);
+    CycleCount.isCyclic(graph);
     int i = 0;
 //         Print the PageRank values for each node
     for (Map.Entry<Integer, Double> entry : pageRankValues.entrySet()) {

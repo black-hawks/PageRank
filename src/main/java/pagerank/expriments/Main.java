@@ -12,6 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The Main class is the entry point of the PageRank experiment program. It generates a graph from a data file,
+ * calculates the PageRank scores for each page, checks for cycles in the graph, and prints the top ten pages
+ * with the highest PageRank scores.
+ */
 public class Main {
   public static void main(String[] args) throws IOException {
     DataGenerator dataGenerator = new DataGenerator("web-Google-0.001.txt");
@@ -31,10 +36,8 @@ public class Main {
     System.out.println("Top Ten Pages:");
     List<Map.Entry<Integer, Double>> pageRankList = new ArrayList<>(pageRanks.entrySet());
 
-    // Sort pageRankList by descending value
     pageRankList.sort((o1, o2) -> o2.getValue().compareTo(o1.getValue()));
 
-    // Print top 10 nodes and their PageRank values
     int index = 1;
     for (Map.Entry<Integer, Double> entry : pageRankList) {
       System.out.println((index++) + ". " + entry.getKey() + " - " + entry.getValue());

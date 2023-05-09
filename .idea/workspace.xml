@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Convergence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Convergence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false"
+    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -260,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683654563740</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Java Doc for Graph">
+      <created>1683654848544</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1683654848544</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,7 +301,8 @@
     <MESSAGE value="Java Doc for PageRank" />
     <MESSAGE value="Java Doc for PageRankResult" />
     <MESSAGE value="Java Doc for AdjancencyListGraph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for AdjancencyListGraph" />
+    <MESSAGE value="Java Doc for Graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for Graph" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

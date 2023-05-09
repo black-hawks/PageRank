@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="Additional data">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Convergence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Mains.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/PageRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2330888d-1e29-4a03-855a-ca65508f1d8b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/CycleCount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRankResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRankResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/expriments/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/CsvFileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/util/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/util/DataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-0.1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-25.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-Google-50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/AdjacencyListGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/AdjacencyListGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pagerank/datastructure/graph/Graph.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +55,7 @@
       <recent name="pagerank" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Convergence">
+  <component name="RunManager" selected="Application.pagerank.expriments.Main">
     <configuration name="Convergence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pagerank.expriments.Convergence" />
       <module name="PageRank" />
@@ -167,9 +156,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Convergence" />
         <item itemvalue="Application.pagerank.expriments.Main" />
         <item itemvalue="Application.PageRank" />
+        <item itemvalue="Application.Convergence" />
         <item itemvalue="Application.Mains" />
         <item itemvalue="Application.Main" />
       </list>
@@ -226,7 +215,49 @@
       <option name="project" value="LOCAL" />
       <updated>1683641597190</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add Convergence Experiment">
+      <created>1683649654913</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1683649654913</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update README.md">
+      <created>1683653258353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653258353</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update .idea files">
+      <created>1683653384913</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653384913</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Java Doc for CycleCount">
+      <created>1683653618021</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653618021</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Java Doc for PageRank">
+      <created>1683653964777</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1683653964777</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Java Doc for PageRankResult">
+      <created>1683654103886</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683654103886</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,7 +277,13 @@
     <MESSAGE value="Fix Graph Vertex issue" />
     <MESSAGE value="Add Experiments" />
     <MESSAGE value="Additional data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional data" />
+    <MESSAGE value="Add Convergence Experiment" />
+    <MESSAGE value="Update README.md" />
+    <MESSAGE value="Update .idea files" />
+    <MESSAGE value="Java Doc for CycleCount" />
+    <MESSAGE value="Java Doc for PageRank" />
+    <MESSAGE value="Java Doc for PageRankResult" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java Doc for PageRankResult" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -263,11 +300,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/pagerank/PageRankTest.java</url>
           <line>43</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pagerank/algorithms/PageRank.java</url>
-          <line>23</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,9 +4,21 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * A utility class to read data from a file.
+ */
 public class FileReader {
+  /**
+   * The path of the file to be read
+   */
   public final String filepath;
+  /**
+   * The delimiter used to separate fields in the file
+   */
   public final String delimiter;
+  /**
+   * The buffered reader to read from the file
+   */
   protected BufferedReader br;
 
   /**
@@ -46,6 +58,11 @@ public class FileReader {
     return line.split(delimiter);
   }
 
+  /**
+   * Closes the stream associated with this FileReader.
+   *
+   * @throws IOException if an I/O error occurs.
+   */
   public void closeStream() throws IOException {
     br.close();
   }

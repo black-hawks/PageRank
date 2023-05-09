@@ -20,7 +20,7 @@ import java.util.Map;
 public class Main {
   public static void main(String[] args) throws IOException {
     DataGenerator dataGenerator = new DataGenerator();
-    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), "graph_data.csv");
+    Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>(), "web-Google-0.01.txt");
     System.out.println("Number of Vertices: " + graph.getVertices().size());
     PageRank<Integer> pageRank = new PageRank<>(graph, graph.getNumNodes());
     PageRankResult<Integer> pageRankResult = pageRank.calculatePageRank();

@@ -45,4 +45,8 @@ public class FileReader {
     }
     return line.split(delimiter);
   }
+
+  public void closeStream() throws IOException {
+    br.close();
+  }
 }

@@ -66,7 +66,7 @@ public class PageRank {
             // Check for convergence
             hasConverged = true;
             for (Node node: graph.getVertices()) {
-                if (Math.abs(node.getCurrentRank() - node.getPreviousRank()) > EPSILON) {
+                if (Math.abs(node.getCurrentRank() - node.getPreviousRank()) < EPSILON) {
                     hasConverged = false;
                     break;
                 }

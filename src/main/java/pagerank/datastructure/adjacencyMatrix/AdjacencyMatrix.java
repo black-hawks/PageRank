@@ -7,8 +7,8 @@ public class AdjacencyMatrix {
 //    int numVertices;
 
     long[][] matrix;
-    ArrayList<Double> currentRanks;
-    ArrayList<Double> previousRanks;
+    double[] currentRanks;
+    double[] previousRanks;
     int numOfVertices;
 
     public AdjacencyMatrix(int numOfVertices){
@@ -17,10 +17,10 @@ public class AdjacencyMatrix {
         for (long[] row: matrix) {
             Arrays.fill(row, 0);
         }
-        currentRanks = new ArrayList<Double>(numOfVertices);
-        previousRanks = new ArrayList<Double>(numOfVertices);
-        Collections.fill(previousRanks,(1.0 / numOfVertices));
-        Collections.fill(currentRanks,(1.0 / numOfVertices));
+        currentRanks = new double[numOfVertices];
+        previousRanks = new double[numOfVertices];
+        Arrays.fill(previousRanks,(1.0 / numOfVertices));
+        Arrays.fill(currentRanks,(1.0 / numOfVertices));
     }
 
 
@@ -32,11 +32,11 @@ public class AdjacencyMatrix {
         return matrix;
     }
 
-    public ArrayList<Double> getCurrentRanks(){
+    public double[] getCurrentRanks(){
         return currentRanks;
     }
 
-    public ArrayList<Double> getPreviousRanks(){
+    public double[] getPreviousRanks(){
         return previousRanks;
     }
 

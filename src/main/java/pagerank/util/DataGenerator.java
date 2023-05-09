@@ -8,8 +8,8 @@ import java.io.IOException;
 public class DataGenerator {
   private final FileReader fileReader;
 
-  public DataGenerator() throws FileNotFoundException {
-    this.fileReader = new FileReader("web-Google.txt", "\t");
+  public DataGenerator(String filepath) throws FileNotFoundException {
+    this.fileReader = new FileReader(filepath, "\t");
   }
 
   public Graph<Integer> generateGraph(Graph<Integer> graph) throws IOException {

@@ -1,5 +1,6 @@
 package pagerank.expriments;
 
+import pagerank.algorithms.CycleCount;
 import pagerank.algorithms.PageRank;
 import pagerank.algorithms.PageRankResult;
 import pagerank.datastructure.graph.AdjacencyListGraph;
@@ -13,13 +14,17 @@ import java.util.Map;
 
 public class Main {
   public static void main(String[] args) throws IOException {
-    DataGenerator dataGenerator = new DataGenerator();
+    DataGenerator dataGenerator = new DataGenerator("web-Google-0.001.txt");
     Graph<Integer> graph = dataGenerator.generateGraph(new AdjacencyListGraph<>());
+    System.out.println("Number of Vertices: " + graph.getVertices().size());
     PageRank<Integer> pageRank = new PageRank<>(graph, graph.getNumNodes());
     PageRankResult<Integer> pageRankResult = pageRank.calculatePageRank();
     System.out.println();
+    CycleCount.isCyclic(graph);
+    System.out.println();
+    System.out.println("Total iterations: " + pageRankResult.getConvergence().size());
+    System.out.println();
     printTopTenPages(pageRankResult.getPageRankList());
-    printConvergenceTimeline(pageRankResult.getConvergence());
   }
 
   private static void printTopTenPages(Map<Integer, Double> pageRanks) {
@@ -36,15 +41,6 @@ public class Main {
       if (index > 10) {
         break;
       }
-    }
-    System.out.println();
-  }
-
-  private static void printConvergenceTimeline(List<Double> convergence) {
-    System.out.println("Convergence Timeline:");
-    int index = 1;
-    for (Double difference : convergence) {
-      System.out.println("Iteration " + (index++) + ": " + difference);
     }
     System.out.println();
   }

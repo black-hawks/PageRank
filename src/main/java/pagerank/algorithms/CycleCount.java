@@ -1,18 +1,17 @@
 package pagerank.algorithms;
 
 
-import pagerank.datastructure.graph.AdjacencyListGraph;
 import pagerank.datastructure.graph.Graph;
-import pagerank.datastructure.graph.Node;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 public class CycleCount {
-  public static int count = 0;
+  private CycleCount() {
+    throw new IllegalStateException("Utility class");
+  }
 
-  public static boolean isCyclicUtil(Graph g, Node u, LinkedList<Node> visited, LinkedList<Node> recursionStack) {
+  public static boolean isCyclicUtil(Graph<Integer> g, Integer u, List<Integer> visited, List<Integer> recursionStack) {
     if (recursionStack.contains(u)) {
       return true;
     }
@@ -24,9 +23,9 @@ public class CycleCount {
     visited.add(u);
     recursionStack.add(u);
 
-    List<Node> neighbours = g.getNeighbors(u);
+    List<Integer> neighbours = g.getNeighbors(u);
 
-    for (Node v : neighbours) {
+    for (Integer v : neighbours) {
       if (isCyclicUtil(g, v, visited, recursionStack)) {
         return true;
       }
@@ -36,56 +35,24 @@ public class CycleCount {
     return false;
   }
 
-  public static void isCyclic(Graph<Node> graph) {
-    LinkedList<Node> visited = new LinkedList();
-    LinkedList<Node> recursionStack = new LinkedList();
+  public static void isCyclic(Graph<Integer> graph) {
+    LinkedList<Integer> visited = new LinkedList<>();
+    LinkedList<Integer> recursionStack = new LinkedList<>();
+    int count = 0;
 
-    Set<Node> vertices = ((AdjacencyListGraph) graph).getAllNodes();
-    for (Node node : vertices) {
-      if (graph.getNeighbors(node).size() != 0) {
-        if (!visited.contains(node) && isCyclicUtil(graph, graph.getNeighbors(node).get(0), visited, recursionStack)) {
-          count++;
-        }
+    List<Integer> vertices = graph.getVertices();
+    for (Integer node : vertices) {
+      if (!graph.getNeighbors(node).isEmpty() && (!visited.contains(node) && isCyclicUtil(graph, graph.getNeighbors(node).get(0), visited, recursionStack))) {
+        count++;
       }
 
     }
     if (count > 0) {
-      System.out.println("Cycle detected");
-      System.out.println("Graph contains " + count + " cycles");
+      System.out.println("Cycle detected: Graph contains " + count + " cycles");
     } else {
       System.out.println("Graph doesn't contain cycle");
     }
-
-//  return count;
   }
-
-
-//    public static void main(String args[]) {
-//      Graph g = new AdjacencyListGraph();
-//      Node node1 = new Node(1);
-//      Node node2 = new Node(2);
-//      Node node3 = new Node(3);
-//      Node node4 = new Node(4);
-//      Node node5 = new Node(5);
-//      Node node6 = new Node(6);
-//      Node node7 = new Node(7);
-//      Node node8 = new Node(8);
-//
-//      g.addEdge(node1, node2);
-//      g.addEdge(node2, node3);
-//      g.addEdge(node3, node1);
-//      g.addEdge(node4, node5);
-//      g.addEdge(node5, node6);
-//      g.addEdge(node6, node7);
-//      g.addEdge(node7, node4);
-//
-//      if (isCyclic(g) > 0) {
-//        System.out.println("Cycle detected");
-//        System.out.println("Graph contains " + count + " cycles");
-//      } else {
-//        System.out.println("Graph doesn't contain cycle");
-//      }
-//    }
 }
 
 

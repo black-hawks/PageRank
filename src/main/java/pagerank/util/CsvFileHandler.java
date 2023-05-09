@@ -1,66 +1,59 @@
 package pagerank.util;
 
-import pagerank.datastructure.graph.Node;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.List;
+import java.util.Map;
 
 public class CsvFileHandler {
 
-    public static void csvWriter(String filename, List<Node> pageRankValues){
+  public static void csvWriter(String filename, Map<Integer, Double> pageRankValues) {
 
-        try {
-            FileWriter writer = new FileWriter(filename);
-            for(Node node : pageRankValues){
-                String data = node.getId() + "," + node.getRank();
-                writer.write(String.join(",", data));
-                writer.write("\n");
-            }
+    try {
+      FileWriter writer = new FileWriter(filename);
+      for (Map.Entry<Integer, Double> entry : pageRankValues.entrySet()) {
+        String data = entry.getKey() + "\t" + entry.getValue();
+        writer.write(data);
+        writer.write("\n");
+      }
 
-            writer.close();
-            System.out.println("Data written to the file.");
-
-//            ExternalMergeSort externalMergeSort = new ExternalMergeSort();
-//            externalMergeSort.sort(filename, "InputFile.csv");
-//            System.out.println("CSV file created successfully.");
+      writer.close();
+      System.out.println("Data written to the file.");
 
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+    } catch (IOException e) {
+      e.printStackTrace();
     }
 
-    public static  void csvReader(String filename){
-//        String csvFile = "DataFile.csv";
-        String line = "";
-        String csvDelimiter = ",";
-        int rowCount = 0;
+  }
 
-        try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
+  public static void csvReader(String filename) {
+    String line = "";
+    String csvDelimiter = ",";
+    int rowCount = 0;
 
-            // Read the first 10 rows of the CSV file
-            while ((line = br.readLine()) != null && rowCount < 10) {
+    try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 
-                // Split the CSV row into columns
-                String[] row = line.split(csvDelimiter);
+      // Read the first 10 rows of the CSV file
+      while ((line = br.readLine()) != null && rowCount < 10) {
 
-                // Print each column in the row
-                for (String column : row) {
-                    System.out.print(column + "\t");
-                }
-                System.out.println();
+        // Split the CSV row into columns
+        String[] row = line.split(csvDelimiter);
 
-                rowCount++;
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
+        // Print each column in the row
+        for (String column : row) {
+          System.out.print(column + "\t");
         }
+        System.out.println();
 
+        rowCount++;
+      }
+
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+
+  }
 
 }
